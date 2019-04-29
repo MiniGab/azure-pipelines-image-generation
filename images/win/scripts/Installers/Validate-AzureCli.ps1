@@ -15,7 +15,7 @@ else
 }
 
 
-if( $($(az --version) | out-string)  -match  'azure-cli \((?<version>.*)\)' )
+if( $($(az --version) | out-string)  -match  'azure-cli\s+(?<version>[0-9.]*)' )
 {
    $azureCliVersion = $Matches.version
 }
